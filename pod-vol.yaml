@@ -9,6 +9,7 @@ spec:
     volumeMounts:
     - name: config-volume
       mountPath: /tmp/config
+    command: ["/bin/bash", "-c", "env" ]
   volumes:
   - name: config-volume
     configMap:
