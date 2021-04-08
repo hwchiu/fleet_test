@@ -12,6 +12,7 @@ data:
   json.data: |
     {
       "key": {
-         "storage": "yes"
+         "storage": "yes",
+         "haha":"update"
       }
     }
