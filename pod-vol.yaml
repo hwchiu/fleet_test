@@ -18,7 +18,7 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /tmp/config
-        command: ["/bin/bash", "-c", "cat /tmp/config/json.data" ]
+        command: ["/bin/bash", "-c", "sleep 900000s" ]
         imagePullPolicy: IfNotPresent
       volumes:
       - name: config-volume
