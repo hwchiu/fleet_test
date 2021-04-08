@@ -10,6 +10,7 @@ spec:
     - name: config-volume
       mountPath: /tmp/config
     command: ["/bin/bash", "-c", "env" ]
+    imagePullPolicy: IfNotPresent
   volumes:
   - name: config-volume
     configMap:
