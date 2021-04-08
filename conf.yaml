@@ -13,6 +13,7 @@ data:
     {
       "key": {
          "storage": "yes",
+         "doknow": "yes",
          "haha":"data"
       }
     }
