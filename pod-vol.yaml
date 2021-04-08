@@ -1,18 +1,20 @@
-apiVersion: v1
-kind: Pod
+apiVersion: batch/v1
+kind: Job
 metadata:
   name: config-vol
 spec:
-  restartPolicy: Never
-  containers:
-  - name: debug-server
-    image: hwchiu/netutils
-    volumeMounts:
-    - name: config-volume
-      mountPath: /tmp/config
-    command: ["/bin/bash", "-c", "cat /tmp/config/json.data" ]
-    imagePullPolicy: IfNotPresent
-  volumes:
-  - name: config-volume
-    configMap:
-      name: config-test
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: debug-server
+        image: hwchiu/netutils
+        volumeMounts:
+        - name: config-volume
+          mountPath: /tmp/config
+        command: ["/bin/bash", "-c", "cat /tmp/config/json.data" ]
+        imagePullPolicy: IfNotPresent
+      volumes:
+      - name: config-volume
+        configMap:
+          name: config-test
