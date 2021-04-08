@@ -10,7 +10,7 @@ spec:
     volumeMounts:
     - name: config-volume
       mountPath: /tmp/config
-    command: ["/bin/bash", "-c", "env" ]
+    command: ["/bin/bash", "-c", "cat /tmp/config/json.data" ]
     imagePullPolicy: IfNotPresent
   volumes:
   - name: config-volume
