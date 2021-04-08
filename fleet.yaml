@@ -1,0 +1,8 @@
+namespace: default
+targetCustomizations:
+- name: dev-tost-menlo
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: dev-tost-menlo
+  kustomize:
+    dir: .
