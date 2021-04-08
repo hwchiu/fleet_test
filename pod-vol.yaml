@@ -12,7 +12,6 @@ spec:
       labels:
         app: config
     spec:
-      restartPolicy: Never
       containers:
       - name: debug-server
         image: hwchiu/netutils
