@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: config-vol
 spec:
+  restartPolicy: Never
   containers:
   - name: debug-server
     image: hwchiu/netutils
