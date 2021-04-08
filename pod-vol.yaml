@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: config-vol
+spec:
+  containers:
+  - name: debug-server
+    image: hwchiu/netutils
+    volumeMounts:
+    - name: config-volume
+      mountPath: /tmp/config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: config-test
